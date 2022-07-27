@@ -524,3 +524,11 @@ table a, #comments a{background-color:inherit;}
 	.font-x2{font-size:1.6rem;}
 	.font-x3{font-size:1.8rem;}
 }
+
+.grey {
+	background-color: #999999;
+}
+
+.light-grey {
+	background-color: #CCCCCC;
+}
