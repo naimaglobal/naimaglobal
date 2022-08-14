@@ -125,63 +125,64 @@
             <h2>NAIMA GLOBAL</h2>
 
             <h2>Comtact Us</h2>
-            <form action="#" method="post">
+
+            <form
+              id="my-form"
+              action="https://formspree.io/f/mjvzvozg"
+              method="POST"
+            >
               <div class="one_third first">
                 <label for="name">Name <span>*</span></label>
                 <input
                   type="text"
-                  name="name"
-                  id="name"
-                  value=""
-                  size="22"
-                  required
+                  name="Contact Us: Name"
+                  required=""
+                  size="30"
                 />
               </div>
+
               <div class="one_third">
                 <label for="email">Mail <span>*</span></label>
                 <input
                   type="email"
-                  name="email"
-                  id="email"
-                  value=""
-                  size="22"
-                  required
+                  name="Contact Us: Email"
+                  required=""
+                  size="30"
                 />
               </div>
               <div class="one_third first">
                 <label for="phone">Phone Number<span>*</span></label>
                 <input
-                  type="number"
-                  name="phone"
-                  id="phone"
-                  value=""
+                  type="tel"
+                  name="Contact Us: Phone"
+                  required=""
                   size="22"
-                  required
                 />
               </div>
+
               <div class="one_third">
                 <label for="phone">WhatsApp Number</label>
                 <input
-                  type="number"
-                  name="phone"
-                  id="phone"
-                  value=""
+                  type="tel"
+                  name="Contact Us: WhatsApp Number"
+                  required=""
                   size="22"
                 />
               </div>
               <div class="block clear">
                 <label for="comment">Description</label>
                 <textarea
-                  name="comment"
-                  id="comment"
-                  cols="25"
+                  type="text"
+                  name="Contact Us: Description"
+                  required=""
+                  maxlength="10000"
                   rows="10"
-                ></textarea>
+                >
+                </textarea>
               </div>
               <div>
-                <input type="submit" name="submit" value="Submit Form" />
-                &nbsp;
-                <input type="reset" name="reset" value="Reset Form" />
+                <button id="my-form-button" type="submit">Submit</button>
+                <p id="my-form-status"></p>
               </div>
             </form>
           </div>
@@ -253,29 +254,34 @@
         <div class="one_quarter">
           <h6 class="heading">Contact Us</h6>
           <p class="nospace btmspace-15">Want us to reach out to you?</p>
-          <form action="#" method="post">
-            <fieldset>
-              <legend>Newsletter:</legend>
-              <input
-                class="btmspace-15"
-                type="text"
-                value=""
-                placeholder="Name"
-              />
-              <input
-                class="btmspace-15"
-                type="number"
-                value=""
-                placeholder="Phone"
-              />
-              <input
-                class="btmspace-15"
-                type="text"
-                value=""
-                placeholder="Email"
-              />
-              <button type="submit" value="submit">Submit</button>
-            </fieldset>
+          <form
+            id="my-form"
+            action="https://formspree.io/f/mjvzvozg"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="Footer: Name"
+              class="btmspace-15"
+              placeholder="Name"
+              required=""
+            />
+            <input
+              type="tel"
+              name="Footer: Phone"
+              class="btmspace-15"
+              placeholder="Phone"
+              required=""
+            />
+            <input
+              type="email"
+              name="Footer: Email"
+              class="btmspace-15"
+              placeholder="Email"
+              required=""
+            />
+            <button id="my-form-button" type="submit">Submit</button>
+            <p id="my-form-status"></p>
           </form>
         </div>
         <div class="one_quarter">
@@ -343,5 +349,6 @@
     <script src="../layout/scripts/jquery.min.js"></script>
     <script src="../layout/scripts/jquery.backtotop.js"></script>
     <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    <script src="../layout/scripts/form.js"></script>
   </body>
 </html>
