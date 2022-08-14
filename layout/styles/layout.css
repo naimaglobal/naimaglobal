@@ -88,6 +88,29 @@ File: Layout CSS
 .imgroup li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
 .imgroup li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
 
+/*Image Certifications */
+.img-hover:hover {
+	display: block;
+	height: 190px;
+	background-color: #c39f0e;
+	opacity: 80%;
+	border-radius: 2px;
+}
+
+.img-hover:hover img {
+    width: 96%;
+	height: 182px;
+	margin-top: 4px;
+}
+/*Most Popular Products text Color*/
+.colorfit {
+	color: #474747;
+}
+
+.row2 .new-hover:hover .colorfit {
+	color: #ffffff;
+}
+
 /* Team Members */
 .team{}
 .team li:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
@@ -524,3 +547,4 @@ table a, #comments a{background-color:inherit;}
 	background-color: #EEEEEE;
     padding: 10px;
 }
+
