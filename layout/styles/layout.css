@@ -93,18 +93,26 @@ File: Layout CSS
 	display: block;
 	height: 190px;
 	background-color: #c39f0e;
+	cursor: pointer;
 	opacity: 80%;
 	border-radius: 2px;
 }
 
-.img-hover:hover img {
+.img-hover:hover .img-custom {
     width: 96%;
 	height: 182px;
 	margin-top: 4px;
 }
-/*Most Popular Products text Color*/
+/*Most Popular Products */
 .colorfit {
 	color: #474747;
+}
+
+.row2 .new-hover:hover .img-custom{
+	height: 182px;
+    margin-top: 4px;
+    width: 96%;
+	opacity: 95%;
 }
 
 .row2 .new-hover:hover .colorfit {
@@ -377,7 +385,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#c39f0e !important;}
 
 .team figure{box-shadow:0px 0px 15px rgba(0,0,0,.1);}
 .team figure:hover{color:#FFFFFF; background-color:#c39f0e;}
+.team figure:hover .img-custom{
 
+}
 #testimonials blockquote{color:#FFFFFF; background-color:rgba(255, 255, 255, 0.158);}
 #testimonials blockquote::before{color:rgba(0,0,0,.2);}
 #testimonials blockquote::after{border-top-color:rgba(255,255,255,.5);}
