@@ -2514,23 +2514,34 @@ Licence URI: https://www.os-templates.com/template-terms
             Pede ullamcorper facilisis bibendum nulla elit gravida elit vel
             suscipit urna.
           </p>
-          <form action="#" method="post">
-            <fieldset>
-              <legend>Newsletter:</legend>
-              <input
-                class="btmspace-15"
-                type="text"
-                value=""
-                placeholder="Name"
-              />
-              <input
-                class="btmspace-15"
-                type="text"
-                value=""
-                placeholder="Email"
-              />
-              <button type="submit" value="submit">Submit</button>
-            </fieldset>
+          <form
+            id="my-form"
+            action="https://formspree.io/f/mjvzvozg"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="Footer: Name"
+              class="btmspace-15"
+              placeholder="Name"
+              required=""
+            />
+            <input
+              type="tel"
+              name="Footer: Phone"
+              class="btmspace-15"
+              placeholder="Phone"
+              required=""
+            />
+            <input
+              type="email"
+              name="Footer: Email"
+              class="btmspace-15"
+              placeholder="Email"
+              required=""
+            />
+            <button id="my-form-button" type="submit">Submit</button>
+            <p id="my-form-status"></p>
           </form>
         </div>
         <div class="one_quarter">
@@ -2647,5 +2658,6 @@ Licence URI: https://www.os-templates.com/template-terms
     <script src="../layout/scripts/jquery.min.js"></script>
     <script src="../layout/scripts/jquery.backtotop.js"></script>
     <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    <script src="../layout/scripts/form.js"></script>
   </body>
 </html>

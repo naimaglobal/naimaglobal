@@ -93,21 +93,29 @@ File: Layout CSS
 	display: block;
 	height: 190px;
 	background-color: #c39f0e;
+	cursor: pointer;
 	opacity: 80%;
 	border-radius: 2px;
 }
 
-.img-hover:hover img {
+.img-hover:hover .img-custom {
     width: 96%;
 	height: 182px;
 	margin-top: 4px;
 }
-/*Most Popular Products text Color*/
+/*Most Popular Products */
 .colorfit {
 	color: #474747;
 }
 
-.row2 .new-hover:hover .colorfit {
+.new-hover:hover .img-custom{
+	height: 182px;
+    margin-top: 4px;
+    width: 96%;
+	opacity: 95%;
+}
+
+.new-hover:hover .colorfit {
 	color: #ffffff;
 }
 
@@ -311,7 +319,27 @@ td{border-width:0 1px;}
 #gallery figure figcaption{display:block; width:100%; clear:both;}
 #gallery li{margin-bottom:30px;}
 
+/*Products Page*/
+.product-grid img {
+	border: 2px solid;
+		padding: 2px;
 
+}
+.product-grid img:hover {
+	box-shadow: 0px 0px 2px 2px black ;
+	opacity: 95%;
+}
+.product-grid {
+	margin-bottom: 20px;
+	border: solid 2px black;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.heading-grid {
+	margin: 0;
+	padding: 10px 20px 30px;
+}
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -377,7 +405,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#c39f0e !important;}
 
 .team figure{box-shadow:0px 0px 15px rgba(0,0,0,.1);}
 .team figure:hover{color:#FFFFFF; background-color:#c39f0e;}
+.team figure:hover .img-custom{
 
+}
 #testimonials blockquote{color:#FFFFFF; background-color:rgba(255, 255, 255, 0.158);}
 #testimonials blockquote::before{color:rgba(0,0,0,.2);}
 #testimonials blockquote::after{border-top-color:rgba(255,255,255,.5);}
@@ -548,13 +578,3 @@ table a, #comments a{background-color:inherit;}
     padding: 10px;
 }
 
-.border-grid{
-	border: solid 2px black;
-	padding: 20px;
-	background-color: rgba(255,255,255,.3);
-}
-
-.heading-grid{
-	margin: 0;
-	padding: 10px 20px 30px;
-}

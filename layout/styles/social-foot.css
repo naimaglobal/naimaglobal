@@ -1,0 +1,29 @@
+/* Style the Sticky icons on web page */
+.stickyicon-list {
+  display: flex;
+  text-align: center;
+  padding-top: 20px;
+  transition: all 0.01s ease-in-out;
+}
+.stickyicon-list a {
+  padding: 8px 11px;
+  margin: 9px;
+  color: white;
+  border-radius: 50%;
+}
+.stickyicon-list a:hover {
+  background: transparent;
+  background-image: linear-gradient(to bottom, #cda504, #c39f0e);
+}
+.facebook {
+  background: #3b5998;
+}
+.google {
+  background: #4285f4;
+}
+.linkedin {
+  background: #0077b5;
+}
+.instagram {
+  background-image: linear-gradient(to bottom, #8a3ab9, #bc2a8d, #cd486b);
+}
