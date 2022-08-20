@@ -548,3 +548,13 @@ table a, #comments a{background-color:inherit;}
     padding: 10px;
 }
 
+.border-grid{
+	border: solid 2px black;
+	padding: 20px;
+	background-color: rgba(255,255,255,.3);
+}
+
+.heading-grid{
+	margin: 0;
+	padding: 10px 20px 30px;
+}
