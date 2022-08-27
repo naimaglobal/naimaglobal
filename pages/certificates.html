@@ -42,7 +42,7 @@
             <!-- ################################################################################################ -->
           </div>
           <div id="mainnav_c"></div>
-              <!-- <li><a class="drop" href="#">Pages</a>
+          <!-- <li><a class="drop" href="#">Pages</a>
                 <ul>
                   <li><a href="pages/gallery.html">Gallery</a></li>
                   <li><a href="pages/full-width.html">Full Width</a></li>
@@ -97,6 +97,46 @@
           <p class="heading underline font-x2">MEMBERSHIP / CERTIFICATES</p>
         </div>
         <ul class="nospace group team">
+          <li class="one_half first">
+            <figure>
+              <!-- <a class="imgover" href="#"> -->
+              <img
+                src="../images/demo/Udyog Adhaar Certificate-1.jpg"
+                id="myImg1"
+                class="img1"
+              />
+              <div id="myModal1" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01" />
+              </div>
+              <figcaption>
+                <strong>Udyog Adhaar Certificate</strong>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="one_half">
+            <figure>
+              <!-- <a class="imgover" href="#"> -->
+              <img
+                id="myImg2"
+                src="../images/demo/IEC Certificate-1.jpg"
+                class="img1"
+              />
+              <div id="myModal2" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img02" />
+              </div>
+              <!-- </a> -->
+              <figcaption>
+                <strong>IEC Certificate</strong>
+                <!-- <em>Sample certificate title</em> -->
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <br />
+        <br />
+        <!-- <ul class="nospace group team">
           <li class="one_quarter first">
             <figure>
               <a class="imgover" href="#"
@@ -141,55 +181,7 @@
               </figcaption>
             </figure>
           </li>
-        </ul>
-        <br />
-        <br />
-        <ul class="nospace group team">
-          <li class="one_quarter first">
-            <figure>
-              <a class="imgover" href="#"
-                ><img src="../images/demo/300x300.png" alt=""
-              /></a>
-              <figcaption>
-                <strong>Certificate Sample</strong>
-                <em>Sample certificate title</em>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="one_quarter">
-            <figure>
-              <a class="imgover" href="#"
-                ><img src="../images/demo/300x300.png" alt=""
-              /></a>
-              <figcaption>
-                <strong>Certificate Sample</strong>
-                <em>Sample certificate title</em>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="one_quarter">
-            <figure>
-              <a class="imgover" href="#"
-                ><img src="../images/demo/300x300.png" alt=""
-              /></a>
-              <figcaption>
-                <strong>Certificate Sample</strong>
-                <em>Sample certificate title</em>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="one_quarter">
-            <figure>
-              <a class="imgover" href="#"
-                ><img src="../images/demo/300x300.png" alt=""
-              /></a>
-              <figcaption>
-                <strong>Certificate Sample</strong>
-                <em>Sample certificate title</em>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
+        </ul> -->
         <!-- ################################################################################################ -->
       </div>
     </div>
@@ -204,9 +196,10 @@
     <script>
       $(document).ready(function () {
         $("#footer_c").load("footer.html");
-        $('#mainnav_c').load("headers/mainnav.html");
+        $("#mainnav_c").load("headers/mainnav.html");
         $("#topnav_c").load("./headers/topnav.html");
       });
     </script>
+    <script src="../layout/scripts/modal.js"></script>
   </body>
 </html>
