@@ -28,6 +28,7 @@ Licence URI: https://www.os-templates.com/template-terms
       type="text/css"
       media="all"
     />
+    
   </head>
   <body id="top">
     <!-- ################################################################################################ -->
@@ -112,86 +113,35 @@ Licence URI: https://www.os-templates.com/template-terms
         <div class="content">
           <div id="comments">
             <h2>Blogs</h2>
-            <ul>
-              <li>
-                <article>
-                  <header>
-                    <address>By <a href="#">A Name</a></address>
-                    <time datetime="2045-04-06T08:15+00:00"
-                      >Friday, 6<sup>th</sup> April 2045 @08:15:00</time
-                    >
-                  </header>
-                  <div class="comcont">
-                    <p>
-                      This is an example of a comment made on a post. You can
-                      either edit the comment, delete the comment or reply to
-                      the comment. Use this as a place to respond to the post or
-                      to share what you are thinking.
-                    </p>
-                  </div>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <header>
-                    <address>By <a href="#">A Name</a></address>
-                    <time datetime="2045-04-06T08:15+00:00"
-                      >Friday, 6<sup>th</sup> April 2045 @08:15:00</time
-                    >
-                  </header>
-                  <div class="comcont">
-                    <p>
-                      This is an example of a comment made on a post. You can
-                      either edit the comment, delete the comment or reply to
-                      the comment. Use this as a place to respond to the post or
-                      to share what you are thinking.
-                    </p>
-                  </div>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <header>
-                    <address>By <a href="#">A Name</a></address>
-                    <time datetime="2045-04-06T08:15+00:00"
-                      >Friday, 6<sup>th</sup> April 2045 @08:15:00</time
-                    >
-                  </header>
-                  <div class="comcont">
-                    <p>
-                      This is an example of a comment made on a post. You can
-                      either edit the comment, delete the comment or reply to
-                      the comment. Use this as a place to respond to the post or
-                      to share what you are thinking.
-                    </p>
-                  </div>
-                </article>
-              </li>
+            <ul id="add-blog">
+              
             </ul>
+            
             <h2>Write A Blog</h2>
             <form
               id="my-form-blog"
-              action="https://formspree.io/f/mjvzvozg"
+              action="https://script.google.com/macros/s/AKfycbyx6QdQmsk4_nkKNnH7v0R1lb8RSwEWafo5fyLUXRYL-qfi46qlfB1kuJi44s9fXMWtSg/exec"
+              
               method="POST"
             >
               <label for="name">Name <span>*</span></label>
               <input
                 type="text"
-                name="Blog: Name"
+                name="Blog_Name"
                 class="btmspace-15"
                 required=""
               />
               <label for="email">Mail <span>*</span></label>
               <input
                 type="email"
-                name="Blog: Email"
+                name="Blog_Email"
                 class="btmspace-15"
                 required=""
               />
               <label for="comment">Blog</label>
               <textarea
                 type="text"
-                name="Blog: Blog"
+                name="Blog_Blog"
                 class="btmspace-15"
                 required=""
                 maxlength="10000"
@@ -219,10 +169,47 @@ Licence URI: https://www.os-templates.com/template-terms
     <script src="../layout/scripts/jquery.mobilemenu.js"></script>
     <script>
       $(document).ready(function () {
+        
         $("#footer_b").load("footer.html");
         $("#mainnav_b").load("./headers/mainnav.html");
         $("#topnav_b").load("./headers/topnav.html");
+        $('#my-form-button').submit(function (e) {
+          e.preventDefault();
+          // alert("Successfully Updated");
+          // window.history.back()
+        })
+        fetch('https://script.google.com/macros/s/AKfycbyx6QdQmsk4_nkKNnH7v0R1lb8RSwEWafo5fyLUXRYL-qfi46qlfB1kuJi44s9fXMWtSg/exec')
+        .then(response=>response.json()).then(data=>{
+          var count = 1;
+          const size = data['content'].length;
+          console.log(data);
+          
+          var ul = document.getElementById("add-blog");
+          while(count<size){
+            var li = document.createElement("li");
+            // console.log(data['content'][count][0]);
+            var add = data['content'][count][0];
+            li.innerHTML = `<article>
+                  <header>
+                    <address>By <a href="#">`+ data['content'][count][0]+`</a></address>
+                    <time 
+                      >`+ data['content'][count][3] +`</time
+                    >
+                  </header>
+                  <div class="comcont">
+                    <p>`+ data['content'][count][2]+`
+                      
+                    </p>
+                  </div>
+                </article>`;
+                 ul.appendChild(li);
+                 count++;
+          }
+          
+          
       });
+    });
     </script>
+    
   </body>
 </html>
