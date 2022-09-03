@@ -890,24 +890,61 @@ td {
 }
 
 /*Products Page*/
-.product-grid img {
-  border: 2px solid;
-  padding: 2px;
-}
-.product-grid img:hover {
-  box-shadow: 0px 0px 2px 2px black;
-  opacity: 95%;
-}
-.product-grid {
-  margin-bottom: 20px;
-  border: solid 2px black;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
+
 
 .heading-grid {
   margin: 0;
   padding: 10px 20px 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.container-product{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 20px;
+    border: solid 2px black;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.container-product img{
+  margin-top: 5px;
+  border: 2px solid;
+  height: 200px;
+  width: 95%;
+  padding: 2px;
+}
+.container-product img:hover {
+  box-shadow: 0px 0px 2px 2px black;
+  opacity: 95%;
+}
+
+.navigation-product{
+grid-column: span 3;
+}
+.navigation-product .align-navigation{
+  text-align: center;
+}
+
+.navigation-product ul{
+  text-align: center;
+}
+
+.main-content-product{
+  grid-column: span 9;
+  
+}
+.list-grid-product{
+display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.list1-product{
+grid-column: span 7;
+}
+.list2-product {
+  grid-column: span 5;
 }
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
