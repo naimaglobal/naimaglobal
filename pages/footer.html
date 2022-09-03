@@ -54,12 +54,15 @@
         <div class="one_quarter first">
           <h6 class="heading">Quick Links</h6>
           <ul class="nospace linklist">
-            <li><a href="pages/about.html">About Us</a></li>
-            <li><a href="pages/blog.html">Blog</a></li>
+            <li><a href="/pages/about.html">About Us</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
             <li>
-              <a href="pages/certificates.html">Membership / Certifications</a>
+              <a href="/pages/certificates.html">Membership / Certifications</a>
             </li>
-            <li><a href="pages/contact.html">Contact Us</a></li>
+            <li>
+              <a href="/pages/products.html">Products</a>
+            </li>
+            <li><a href="/pages/contact.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="one_quarter">
@@ -97,33 +100,8 @@
         </div>
         <div class="one_quarter">
           <h6 class="heading">Recent News</h6>
-          <ul class="nospace linklist">
-            <li>
-              <article>
-                <p class="nospace btmspace-10">
-                  <a href="#"
-                    >PM Garib Kalyan Anna Yojana extension beyond Sept to be
-                    difficult due to depleting wheat, rice stocks</a
-                  >
-                </p>
-                <time class="block font-xs" datetime="2045-04-06"
-                  >Friday, 26<sup>th</sup> July 2022</time
-                >
-              </article>
-            </li>
-            <li>
-              <article>
-                <p class="nospace btmspace-10">
-                  <a href="#"
-                    >Mann govt okays custom milling policy; millers to deliver
-                    rice to FCI</a
-                  >
-                </p>
-                <time class="block font-xs" datetime="2045-04-05"
-                  >Thursday, 25<sup>th</sup>July 2022</time
-                >
-              </article>
-            </li>
+          <ul class="nospace linklist" id="add-news">
+        
           </ul>
         </div>
         <div class="one_quarter">
@@ -138,16 +116,32 @@
             ></iframe>
           </div>
           <div class="stickyicon-list">
-            <a href="#" class="facebook">
+            <a
+              href="https://www.facebook.com/Naima-Global-107559612067724/"
+              class="facebook"
+              target="_blank"
+            >
               <i class="fab fa-facebook fa-lg"></i>
             </a>
-            <a href="#" class="linkedin">
+            <a
+              href="https://www.linkedin.com/company/naima-global01/"
+              class="linkedin"
+              target="_blank"
+            >
               <i class="fab fa-linkedin fa-lg"></i>
             </a>
-            <a href="#" class="google">
+            <a
+              href="mailto:Tushar.gupta@naimaglobal.com"
+              class="google"
+              target="_blank"
+            >
               <i class="fa fa-envelope fa-lg"></i>
             </a>
-            <a href="#" class="instagram">
+            <a
+              href="https://www.instagram.com/naima.global/"
+              class="instagram"
+              target="_blank"
+            >
               <i class="fab fa-instagram fa-lg"></i>
             </a>
           </div>
@@ -165,5 +159,35 @@
     </div>
 
     <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+
+    <!-- JAVASCRIPTS -->
+    <script src="../layout/scripts/form.js"></script>
+    <script>
+      fetch('https://script.google.com/macros/s/AKfycbzB1hs8v57i5FIRA1GrgMgj4k4aKDz4Iw9eLx0Jx9IqT5vhpnUUUQULPvkFhGBOVoEqDw/exec')
+          .then(response => response.json()).then(data => {
+            var count = 1;
+            const size = data['content'].length;
+            console.log(data);
+
+            var ul = document.getElementById("add-news");
+            while (count < size) {
+              var li = document.createElement("li");
+              var add = data['content'][count][0];
+              li.innerHTML = `<article>
+                  <p class="nospace btmspace-10">
+                  <a href="#"
+                    >`+data['content'][count][0]+`</a
+                  >
+                </p>
+                <time class="block font-xs" 
+                  >`+data['content'][count][1]+`</time
+                >
+                </article>`;
+              ul.appendChild(li);
+              count++;
+            }
+          });
+        
+    </script>
   </body>
 </html>
