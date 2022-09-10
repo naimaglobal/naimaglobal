@@ -46,8 +46,8 @@ Licence URI: https://www.os-templates.com/template-terms
             <h1><a href="../index.html">Naima Global</a></h1>
             <!-- ################################################################################################ -->
           </div>
-        <div id="mainnav_b"></div>
-            <!-- ################################################################################################ -->  
+          <div id="mainnav_b"></div>
+          <!-- ################################################################################################ -->
         </header>
       </div>
       <!-- ################################################################################################ -->
@@ -78,8 +78,7 @@ Licence URI: https://www.os-templates.com/template-terms
         <div class="content">
           <div id="comments">
             <h2>Blogs</h2>
-            <ul id="add-blog">  
-            </ul>
+            <ul id="add-blog"></ul>
             <h2>Write A Blog</h2>
             <form
               id="my-form-blog"
@@ -130,41 +129,48 @@ Licence URI: https://www.os-templates.com/template-terms
     <script src="../layout/scripts/form.js"></script>
     <script>
       $(document).ready(function () {
+        $("#footer_b").load("footer.html");
+        $("#mainnav_b").load("./headers/mainnav.html");
+        $("#topnav_b").load("./headers/topnav.html");
+        fetch(
+          "https://script.google.com/macros/s/AKfycbzJS46oSu7RWgTS8roxaDaCeHFv6oWqi2CMzmDAXzWRb5wZbiLcT9MrFdF3K5CUNKiW/exec"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            var count = 1;
+            const size = data["content"].length;
+            console.log(data);
 
-          $("#footer_b").load("footer.html");
-          $("#mainnav_b").load("./headers/mainnav.html");
-          $("#topnav_b").load("./headers/topnav.html");
-          fetch('https://script.google.com/macros/s/AKfycbxK7eOG_CvkwujNwmZhwaeyrveOsmpEAHdj-zFH4ss4CLhQdkraSPU6_iWOdVpVBnSqbQ/exec')
-            .then(response => response.json()).then(data => {
-              var count = 1;
-              const size = data['content'].length;
-              console.log(data);
-
-              var ul = document.getElementById("add-blog");
-              while (count < size) {
-                var li = document.createElement("li");
-                // console.log(data['content'][count][0]);
-                var add = data['content'][count][0];
-                li.innerHTML = `<article>
+            var ul = document.getElementById("add-blog");
+            while (count < size) {
+              var li = document.createElement("li");
+              // console.log(data['content'][count][0]);
+              var add = data["content"][count][0];
+              li.innerHTML =
+                `<article>
                   <header>
-                    <address>By <a href="#">`+ data['content'][count][0] + `</a></address>
+                    <address>By <a href="#">` +
+                data["content"][count][0] +
+                `</a></address>
                     <time 
-                      >`+ data['content'][count][3] + `</time
+                      >` +
+                data["content"][count][3] +
+                `</time
                     >
                   </header>
                   <div class="comcont">
-                    <p>`+ data['content'][count][2] + `
+                    <p>` +
+                data["content"][count][2] +
+                `
                       
                     </p>
                   </div>
                 </article>`;
-                ul.appendChild(li);
-                count++;
-              }
-            });
-        });
+              ul.appendChild(li);
+              count++;
+            }
+          });
+      });
     </script>
   </body>
 </html>
-
-
