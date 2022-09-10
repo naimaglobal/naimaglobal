@@ -100,9 +100,7 @@
         </div>
         <div class="one_quarter">
           <h6 class="heading">Recent News</h6>
-          <ul class="nospace linklist" id="add-news">
-        
-          </ul>
+          <ul class="nospace linklist" id="add-news"></ul>
         </div>
         <div class="one_quarter">
           <h6 class="heading">Google Maps</h6>
@@ -163,31 +161,38 @@
     <!-- JAVASCRIPTS -->
     <script src="../layout/scripts/form.js"></script>
     <script>
-      fetch('https://script.google.com/macros/s/AKfycbwnG-lvKWFV_LZiyxYwc7obJZ6dTHQeG6-EljYV_fD9kFkWQGAPtVFlJP18vDvgKh12bw/exec')
-          .then(response => response.json()).then(data => {
-            var count = 1;
-            const size = data['content'].length;
-            console.log(data);
+      fetch(
+        "https://script.google.com/macros/s/AKfycbwok3BpebuaXgOnmBDuLbrpKOA32uDMAUUDR7cBzVJubTcqFY_2-lINhsSRgjrDlhGd/exec"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          var count = 1;
+          const size = data["content"].length;
+          console.log(data);
 
-            var ul = document.getElementById("add-news");
-            while (count < size) {
-              var li = document.createElement("li");
-              var add = data['content'][count][0];
-              li.innerHTML = `<article>
+          var ul = document.getElementById("add-news");
+          while (count < size) {
+            var li = document.createElement("li");
+            var add = data["content"][count][0];
+            li.innerHTML =
+              `<article>
                   <p class="nospace btmspace-10">
                   <a href="#"
-                    >`+data['content'][count][0]+`</a
+                    >` +
+              data["content"][count][0] +
+              `</a
                   >
                 </p>
                 <time class="block font-xs" 
-                  >`+data['content'][count][1]+`</time
+                  >` +
+              data["content"][count][1] +
+              `</time
                 >
                 </article>`;
-              ul.appendChild(li);
-              count++;
-            }
-          });
-        
+            ul.appendChild(li);
+            count++;
+          }
+        });
     </script>
   </body>
 </html>
