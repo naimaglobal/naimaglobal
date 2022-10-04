@@ -47,7 +47,12 @@ a{outline:none; text-decoration:none;}
 .fl_left, .imgl{float:left;}
 .fl_right, .imgr{float:right;}
 
-img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
+img {
+    width: auto;max-width: 100%;height: auto;margin: 0;padding: 0;border: none;line-height: normal;vertical-align: middle;
+}
+.img-custom{
+    width: 100%;height: 190px;
+}
 .imgl{margin:0 15px 10px 0; clear:left;}
 .imgr{margin:0 0 10px 15px; clear:right;}
 .imgover{display:inline-block; position:relative; max-width:100%;}
@@ -136,3 +141,5 @@ address, article, aside, figcaption, figure, footer, header, main, nav, section{
 .inspace-15{padding:15px;}
 .inspace-20{padding:20px;}
 .inspace-30{padding:30px;}
+
+

@@ -22,34 +22,16 @@ Licence URI: https://www.os-templates.com/template-terms
       type="text/css"
       media="all"
     />
+    <link
+      href="../layout/styles/social-foot.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
   </head>
   <body id="top">
     <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper row0">
-      <div id="topbar" class="hoc clear">
-        <div class="fl_left">
-          <ul class="nospace">
-            <li><i class="fas fa-phone rgtspace-5"></i> +91 9910822400</li>
-            <li>
-              <i class="far fa-envelope rgtspace-5"></i> contact@naimaglobal.com
-            </li>
-          </ul>
-        </div>
-        <div class="fl_right">
-          <ul class="nospace">
-            <li>
-              <a href="contact.html" title="Send Enquiry"
-                ><i class="fas fa-edit"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
+    <div id="topnav_b"></div>
     <!-- ################################################################################################ -->
     <!-- Top Background Image Wrapper -->
     <div
@@ -64,48 +46,10 @@ Licence URI: https://www.os-templates.com/template-terms
             <h1><a href="../index.html">Naima Global</a></h1>
             <!-- ################################################################################################ -->
           </div>
-          <nav id="mainav" class="fl_right">
-            <!-- ################################################################################################ -->
-            <ul class="clear">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="products.html">Products</a></li>
-
-              <!-- <li><a class="drop" href="#">Pages</a>
-                <ul>
-                  <li><a href="pages/gallery.html">Gallery</a></li>
-                  <li><a href="pages/full-width.html">Full Width</a></li>
-                  <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-                  <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-                  <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-                  <li><a href="pages/font-icons.html">Font Icons</a></li>
-                </ul>
-              </li>
-              <li><a class="drop" href="#">Dropdown</a>
-                <ul>
-                  <li><a href="#">Level 2</a></li>
-                  <li><a class="drop" href="#">Level 2 + Drop</a>
-                    <ul>
-                      <li><a href="#">Level 3</a></li>
-                      <li><a href="#">Level 3</a></li>
-                      <li><a href="#">Level 3</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Level 2</a></li>
-                </ul>
-              </li> -->
-              <li class="active"><a href="blog.html">Blog</a></li>
-              <li>
-                <a href="certificates.html">Membership/Certificate</a>
-              </li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <!-- ################################################################################################ -->
-          </nav>
+          <div id="mainnav_b"></div>
+          <!-- ################################################################################################ -->
         </header>
       </div>
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
       <!-- ################################################################################################ -->
       <div class="overlay">
         <div id="pageintro" class="hoc clear">
@@ -129,107 +73,44 @@ Licence URI: https://www.os-templates.com/template-terms
     </div>
     <!-- End Top Background Image Wrapper -->
     <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
     <div class="wrapper row3">
       <main class="hoc container clear">
         <div class="content">
           <div id="comments">
             <h2>Blogs</h2>
-            <ul>
-              <li>
-                <article>
-                  <header>
-                    <address>By <a href="#">A Name</a></address>
-                    <time datetime="2045-04-06T08:15+00:00"
-                      >Friday, 6<sup>th</sup> April 2045 @08:15:00</time
-                    >
-                  </header>
-                  <div class="comcont">
-                    <p>
-                      This is an example of a comment made on a post. You can
-                      either edit the comment, delete the comment or reply to
-                      the comment. Use this as a place to respond to the post or
-                      to share what you are thinking.
-                    </p>
-                  </div>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <header>
-                    <address>By <a href="#">A Name</a></address>
-                    <time datetime="2045-04-06T08:15+00:00"
-                      >Friday, 6<sup>th</sup> April 2045 @08:15:00</time
-                    >
-                  </header>
-                  <div class="comcont">
-                    <p>
-                      This is an example of a comment made on a post. You can
-                      either edit the comment, delete the comment or reply to
-                      the comment. Use this as a place to respond to the post or
-                      to share what you are thinking.
-                    </p>
-                  </div>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <header>
-                    <address>By <a href="#">A Name</a></address>
-                    <time datetime="2045-04-06T08:15+00:00"
-                      >Friday, 6<sup>th</sup> April 2045 @08:15:00</time
-                    >
-                  </header>
-                  <div class="comcont">
-                    <p>
-                      This is an example of a comment made on a post. You can
-                      either edit the comment, delete the comment or reply to
-                      the comment. Use this as a place to respond to the post or
-                      to share what you are thinking.
-                    </p>
-                  </div>
-                </article>
-              </li>
-            </ul>
+            <ul id="add-blog"></ul>
             <h2>Write A Blog</h2>
-            <form action="#" method="post">
-              <div class="one_third first">
-                <label for="name">Name <span>*</span></label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  value=""
-                  size="22"
-                  required
-                />
-              </div>
-              <div class="one_third">
-                <label for="email">Mail <span>*</span></label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  value=""
-                  size="22"
-                  required
-                />
-              </div>
-              <div class="block clear">
-                <label for="comment">Blog</label>
-                <textarea
-                  name="comment"
-                  id="comment"
-                  cols="25"
-                  rows="10"
-                ></textarea>
-              </div>
-              <div>
-                <input type="submit" name="submit" value="Submit Form" />
-                &nbsp;
-                <input type="reset" name="reset" value="Reset Form" />
-              </div>
+            <form
+              id="my-form-blog"
+              action="https://formspree.io/f/mjvzvozg"
+              method="POST"
+            >
+              <label for="name">Name <span>*</span></label>
+              <input
+                type="text"
+                name="Blog_Name"
+                class="btmspace-15"
+                required=""
+              />
+              <label for="email">Mail <span>*</span></label>
+              <input
+                type="email"
+                name="Blog_Email"
+                class="btmspace-15"
+                required=""
+              />
+              <label for="comment">Blog</label>
+              <textarea
+                type="text"
+                name="Blog_Blog"
+                class="btmspace-15"
+                required=""
+                maxlength="10000"
+                rows="10"
+              >
+              </textarea>
+              <button id="my-form-button" type="submit">Submit</button>
+              <p id="my-form-status-blog"></p>
             </form>
           </div>
           <!-- ################################################################################################ -->
@@ -240,155 +121,56 @@ Licence URI: https://www.os-templates.com/template-terms
       </main>
     </div>
     <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper coloured">
-      <section id="ctdetails" class="hoc clear">
-        <ul class="nospace clear">
-          <li class="one_quarter first">
-            <div class="block clear">
-              <a href="#"><i class="fas fa-phone"></i></a>
-              <span><strong>Give us a call:</strong> +91 9910822400</span>
-            </div>
-          </li>
-          <li class="one_quarter">
-            <div class="block clear">
-              <a href="#"><i class="fas fa-envelope"></i></a>
-              <span
-                ><strong>Send us a mail:</strong> contact@naimaglobal.com</span
-              >
-            </div>
-          </li>
-          <li class="one_quarter">
-            <div class="block clear">
-              <a href="#"><i class="fas fa-phone"></i></a>
-              <span><strong> WhatsApp Contact:</strong>+91 9910822400</span>
-            </div>
-          </li>
-          <li class="one_quarter">
-            <div class="block clear">
-              <a href="https://goo.gl/maps/2cArrEN7u9QJptj6A"
-                ><i class="fas fa-map-marker-alt"></i
-              ></a>
-              <span
-                ><strong>Come visit us:</strong> Sangrur, Punjab, India</span
-              >
-            </div>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <div
-      class="bgded overlay row4"
-      style="
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url('../images/demo/backgrounds/footer.jpeg');
-      "
-    >
-      <footer id="footer" class="hoc clear">
-        <!-- ################################################################################################ -->
-        <div class="one_quarter first">
-          <h6 class="heading">Quick Links</h6>
-          <ul class="nospace linklist">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="certificates.html">Membership / Certifications</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="one_quarter">
-          <h6 class="heading">Contact Us</h6>
-          <p class="nospace btmspace-15">Want us to reach out to you?</p>
-          <form action="#" method="post">
-            <fieldset>
-              <legend>Newsletter:</legend>
-              <input
-                class="btmspace-15"
-                type="text"
-                value=""
-                placeholder="Name"
-              />
-              <input
-                class="btmspace-15"
-                type="number"
-                value=""
-                placeholder="Phone"
-              />
-              <input
-                class="btmspace-15"
-                type="text"
-                value=""
-                placeholder="Email"
-              />
-              <button type="submit" value="submit">Submit</button>
-            </fieldset>
-          </form>
-        </div>
-        <div class="one_quarter">
-          <h6 class="heading">Recent News</h6>
-          <ul class="nospace linklist">
-            <li>
-              <article>
-                <p class="nospace btmspace-10">
-                  <a href="#"
-                    >PM Garib Kalyan Anna Yojana extension beyond Sept to be
-                    difficult due to depleting wheat, rice stocks</a
-                  >
-                </p>
-                <time class="block font-xs" datetime="2045-04-06"
-                  >Friday, 26<sup>th</sup> July 2022</time
-                >
-              </article>
-            </li>
-            <li>
-              <article>
-                <p class="nospace btmspace-10">
-                  <a href="#"
-                    >Mann govt okays custom milling policy; millers to deliver
-                    rice to FCI</a
-                  >
-                </p>
-                <time class="block font-xs" datetime="2045-04-05"
-                  >Thursday, 25<sup>th</sup>July 2022</time
-                >
-              </article>
-            </li>
-          </ul>
-        </div>
-        <div class="one_quarter">
-          <h6 class="heading">Google Maps</h6>
-          <div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27574.558861705722!2d75.84278585!3d30.242213199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910510deb4fd6dd%3A0x72fec26ae33512c8!2sSangrur%2C%20Punjab%20148001!5e0!3m2!1sen!2sin!4v1659849253355!5m2!1sen!2sin"
-              width="100%"
-              height="200"
-              frameborder="0"
-              style="border: 0"
-            ></iframe>
-          </div>
-        </div>
-        <!-- ################################################################################################ -->
-      </footer>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper row5">
-      <div id="copyright" class="hoc clear">
-        <p class="fl_left">
-          Copyright &copy; 2022 - All Rights Reserved -
-          <a href="#">Naima Global</a>
-        </p>
-      </div>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+    <div id="footer_b"></div>
     <!-- JAVASCRIPTS -->
     <script src="../layout/scripts/jquery.min.js"></script>
     <script src="../layout/scripts/jquery.backtotop.js"></script>
     <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    <script src="../layout/scripts/form.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#footer_b").load("footer.html");
+        $("#mainnav_b").load("./headers/mainnav.html");
+        $("#topnav_b").load("./headers/topnav.html");
+        fetch(
+          "https://script.google.com/macros/s/AKfycbzJS46oSu7RWgTS8roxaDaCeHFv6oWqi2CMzmDAXzWRb5wZbiLcT9MrFdF3K5CUNKiW/exec"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            var count = 1;
+            const size = data["content"].length;
+            console.log(data);
+
+            var ul = document.getElementById("add-blog");
+            while (count < size) {
+              var li = document.createElement("li");
+              // console.log(data['content'][count][0]);
+              var add = data["content"][count][0];
+              li.innerHTML =
+                `<article>
+                  <header>
+                    <address>By <a href="#">` +
+                data["content"][count][0] +
+                `</a></address>
+                    <time 
+                      >` +
+                data["content"][count][3] +
+                `</time
+                    >
+                  </header>
+                  <div class="comcont">
+                    <p>` +
+                data["content"][count][2] +
+                `
+                      
+                    </p>
+                  </div>
+                </article>`;
+              ul.appendChild(li);
+              count++;
+            }
+          });
+      });
+    </script>
   </body>
 </html>

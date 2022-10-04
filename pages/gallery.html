@@ -22,6 +22,12 @@ Licence URI: https://www.os-templates.com/template-terms
       type="text/css"
       media="all"
     />
+    <link
+    href="../layout/styles/social-foot.css"
+    rel="stylesheet"
+    type="text/css"
+    media="all"
+  />
   </head>
   <body id="top">
     <!-- ################################################################################################ -->
@@ -283,29 +289,34 @@ Licence URI: https://www.os-templates.com/template-terms
         <div class="one_quarter">
           <h6 class="heading">Contact Us</h6>
           <p class="nospace btmspace-15">Want us to reach out to you?</p>
-          <form action="#" method="post">
-            <fieldset>
-              <legend>Newsletter:</legend>
-              <input
-                class="btmspace-15"
-                type="text"
-                value=""
-                placeholder="Name"
-              />
-              <input
-                class="btmspace-15"
-                type="number"
-                value=""
-                placeholder="Phone"
-              />
-              <input
-                class="btmspace-15"
-                type="text"
-                value=""
-                placeholder="Email"
-              />
-              <button type="submit" value="submit">Submit</button>
-            </fieldset>
+          <form
+            id="my-form"
+            action="https://formspree.io/f/mjvzvozg"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="Footer: Name"
+              class="btmspace-15"
+              placeholder="Name"
+              required=""
+            />
+            <input
+              type="tel"
+              name="Footer: Phone"
+              class="btmspace-15"
+              placeholder="Phone"
+              required=""
+            />
+            <input
+              type="email"
+              name="Footer: Email"
+              class="btmspace-15"
+              placeholder="Email"
+              required=""
+            />
+            <button id="my-form-button" type="submit">Submit</button>
+            <p id="my-form-status"></p>
           </form>
         </div>
         <div class="one_quarter">
@@ -350,6 +361,20 @@ Licence URI: https://www.os-templates.com/template-terms
               style="border: 0"
             ></iframe>
           </div>
+          <div class="stickyicon-list">
+            <a href="#" class="facebook">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="#" class="linkedin">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a href="#" class="google">
+              <i class="fa fa-envelope fa-lg"></i>
+            </a>
+            <a href="#" class="instagram">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
         </div>
         <!-- ################################################################################################ -->
       </footer>
@@ -384,5 +409,6 @@ Licence URI: https://www.os-templates.com/template-terms
     <script src="../layout/scripts/jquery.min.js"></script>
     <script src="../layout/scripts/jquery.backtotop.js"></script>
     <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    <script src="../layout/scripts/form.js"></script>
   </body>
 </html>
